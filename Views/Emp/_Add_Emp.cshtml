@@ -1,0 +1,28 @@
+@model Emp_DI_2.ViewModels.vmEmployee
+
+<div style="border:1px solid red;">
+    <h4>== Add Employee Form ==</h4>
+    <table>
+
+        <tr class="lineDst_1">
+            <td>Employee Name</td>
+            <td><input type="text" id="txtEmpName_A_Emp_2" /></td>
+        </tr>
+        <tr class="lineDst_1">
+            <td>Salary</td>
+            <td><input type="text" id="txtEmpSalary_A_Emp_2" /></td>
+        </tr>
+        <tr class="lineDst_1">
+            <td>Department</td>
+            <td>
+                @*@Html.DropDownList("DLLlistAdd_Emp_2", ViewBag.DllAllDept_Emp_2 as SelectList, string.Empty,
+                    new { id = "dllDeptAdd_Emp_2", @class = "form -control" })*@
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" id="btnSave_A_Emp_2" value="Save" /></td>
+            <td><input type="button" id="btnCancel_A_Emp_2" value="Cancel" /></td>
+        </tr>
+    </table>
+</div>
+
