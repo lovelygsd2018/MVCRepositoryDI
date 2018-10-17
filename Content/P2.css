@@ -1,0 +1,159 @@
+
+.wholeCont {
+    width: 100%;
+    border: 1px solid blue;
+}
+/** Header **/
+.headertopCont {
+    width: 100%;
+    height: 60px;
+    /*background: #fff;
+    border-bottom:  solid 1px; */
+    border-bottom: 5px solid green;
+    position: fixed;
+    z-index: 200;
+}
+
+.header-right {
+    float: right;
+    display: block;
+    /*display: inline-block;*/
+}
+
+.logo {
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+}
+
+/*** mainCont for @Html.Partial("_P2Menu") & @RenderBody()***/
+.mainCont {
+    width: 100%;
+    margin-top: 60px;
+    border: 1px solid orange;
+}
+/** within .mainCont,  @Html.Partial("_P2Menu") & @RenderBody() is included ***/
+/** for Menu-partialView("_P2Menu") : .leftPart .navilist */
+.Menu_leftPart {
+    background-color: lightpink;
+    /*width: 180px;*/
+    width: 15%;
+    height: 100%;
+    /*position: fixed;*/
+    float: left;
+    /*border-right: #e5e5e5 solid 1px; */
+    border: 1px solid green;
+    overflow: auto;
+}
+
+.naviList {
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+    .naviList ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+        .naviList ul li.last-item {
+            margin-bottom: 50px;
+        }
+
+        .naviList ul li a {
+            display: block;
+            padding: 0 0 0 10px;
+            color: #666;
+            font-size: 15px;
+            font-family: 'robotomedium';
+            line-height: 35px;
+            border: 1px solid #e5e5e5;
+            position: relative;
+            background: #f9f9f9; /* Old browsers */
+        }
+
+            .naviList ul li a span {
+                border-left: 1px solid #e5e5e5;
+                display: block;
+                /*display: inline-block; */
+                float: right;
+                height: 35px;
+                position: absolute;
+                right: 0;
+                width: 27px;
+            }
+
+                .naviList ul li a span::before {
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid #999;
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    right: 7px;
+                    top: 17px;
+                }
+
+            .naviList ul li a.active {
+                background: #4a83d4 none repeat scroll 0 0;
+                border: 1px solid #4a83d4;
+                color: #fff;
+            }
+
+                .naviList ul li a.active span::before {
+                    border-bottom: 6px solid #fff;
+                    border-top: 0;
+                }
+
+                .naviList ul li a.active span {
+                    border-left: 1px solid #69a2f3;
+                }
+
+                .naviList ul li a.active.rightArrow span::before {
+                    border-bottom: 6px solid transparent;
+                    border-left: 6px solid #fff;
+                    border-top: 6px solid transparent;
+                    right: 3px;
+                    top: 12px;
+                }
+
+ul.subnav {
+    display: none;
+    background: #fff;
+}
+
+    ul.subnav li {
+        display: block;
+        border: 0;
+        margin: 0;
+    }
+
+        ul.subnav li a {
+            display: block;
+            background: #fff;
+            line-height: 20px;
+            font-size: 14px;
+            padding: 8px 5px 8px 10px;
+            font-family: 'robotoregular';
+        }
+
+            ul.subnav li a:hover {
+                background: #f5f5f5;
+                color: #4a83d4;
+            }
+
+.subnav a {
+    margin-top: -1px;
+}
+
+ul.subnav li a.current {
+    background: #f5f5f5;
+    color: #4a83d4;
+}
+
+.rowColor2 {
+    background-color: yellow;
+}
+/* table: each line (tr) distance */
+.lineDst_1 {
+    margin-bottom: 5px;
+}
