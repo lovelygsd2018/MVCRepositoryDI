@@ -1,0 +1,58 @@
+@model IEnumerable<Emp_DI_2.ViewModels.vmEmployee>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_T1.cshtml";
+}
+
+<style>
+    .Box1 {
+        width: 40%;
+        height: 100%;
+        float: left;
+        overflow: auto;
+        padding: 1% 1%; /* top,bottom 1% right,left1% */
+        background-color: lavender;
+        border: 5px dotted pink;
+    }
+
+    .Box2 {
+        width: 30%;
+        height: 100%;
+        float: left;
+        /* overflow:auto; */
+        padding: 1% 1%; /* top,bottom 1% right,left1% */
+        background-color: beige;
+        border: 2px dotted brown;
+        margin: 2% 2%;
+    }
+</style>
+<div id="Contaner_MainProd_Prod_2" class="Box1">
+    <h2>Employee List</h2>
+    <div>
+        <input type="button" id="btnAddNew_Emp_2" value="Add New Data" />
+    </div><br />
+    <table id="divTblEmpList_Emp_2" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th></th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr class="lineDst_1">
+                <td>@Html.DisplayFor(modelItem => item.EmployeeID)</td>
+                <td>@Html.DisplayFor(modelItem => item.EmployeeName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Salary)</td>
+                <td>@Html.DisplayFor(modelItem => item.DeparmentName)</td>
+                <td><input type="button" class="btnEdit_Emp_2" value="Edit" /></td>
+            </tr>
+        }
+    </table>
+</div>
+<div id="Container_subEmp_Emp_2" class="Box2">
+    <div id="Section_subEmp_Emp_2"></div>
+</div>
+
